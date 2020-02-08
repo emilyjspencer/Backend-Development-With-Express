@@ -1,12 +1,16 @@
 
 
   var express = require('express')
+  var formidable = require('express-formidable');
   var app = express(); // calling the express() function will initialize the server
 
   app.use(express.static("public"));
 
-  
+  app.use(formidable());
+
+
   app.post('/create-post', function (req, res) {
+    console.log(req.fields);
     console.log('/create-post')
   });
 
