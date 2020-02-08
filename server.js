@@ -5,9 +5,22 @@
 
    // handler function 
    app.get("/", function (req, res) {
-     res.send("Woo Node!!!!")
-
+     res.send("Woo Node!!!!");
+   });
+  
+  app.get("/node", function (req, res) {
+      res.send("Node is fun");
   });
+
+  app.get("/hedgehog", function(req, res) {
+    res.send("My name is Matilda. I am a hedgehog")
+  });
+
+  app.get("/britney", function(req, res) {
+    res.send("It's Britney, b****")
+  });
+
+  
 
   app.listen(3000, function() { // set a port for the  server to listen to 
     console.log('Server is listening on port 3000. Ready to accept requests eheheheheh!');
